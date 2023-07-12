@@ -12,6 +12,7 @@ const Canvas = ({ width, height }) => {
     const image = new Image();
     const url = document.getElementById("canvas").toDataURL("image/jpg");
     image.src = url;
+    console.log(image.ariaValueText);
     setUrl(url);
   };
   function drawLine(start, end, ctx, color, width) {
