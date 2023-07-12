@@ -9,9 +9,7 @@ const Canvas = ({ width, height }) => {
     drawLine(prevPoint, point, ctx, "#FFC0CB", 5);
   }
   const download = () => {
-    const image = new Image();
-    const url = document.getElementById("canvas").toDataURL("image/jpg");
-    image.src = url;
+    const url = document.getElementById("canvas").toDataURL()
     setUrl(url);
   };
   function drawLine(start, end, ctx, color, width) {
