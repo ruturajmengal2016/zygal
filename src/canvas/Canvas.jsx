@@ -9,7 +9,9 @@ const Canvas = ({ width, height }) => {
     drawLine(prevPoint, point, ctx, "#FFC0CB", 5);
   }
   const download = () => {
+    const image = new Image();
     const url = document.getElementById("canvas").toDataURL("image/jpg");
+    image.src = url;
     setUrl(url);
   };
   function drawLine(start, end, ctx, color, width) {
@@ -37,7 +39,7 @@ const Canvas = ({ width, height }) => {
         style={canvasStyle}
         ref={setCanvasRef}
       />
-      <a href={url} download="image.txt" onClick={download}>
+      <a href={url} download="image.jpg" onClick={download}>
         Download
       </a>
     </>
